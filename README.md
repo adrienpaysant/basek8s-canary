@@ -81,6 +81,10 @@ Plain html website with the background color that is shifting for the purpose of
 
 ### All scripts
 
+#### 1_setup_cluster.sh
+
+- launches a k8s cluster
+
 #### 2_docker_build.sh
 
 - builds two docker containers one with a yellow background, the other is blue
@@ -104,10 +108,6 @@ Plain html website with the background color that is shifting for the purpose of
 #### 666_delete_canary_main.sh
 
 - removes all apps on the cluster (all k8s objects)
-
-#### 1_setup_cluster.sh
-
-- launches a k8s cluster
 
 #### 666_delete_cluster.sh
 

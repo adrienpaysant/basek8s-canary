@@ -1,0 +1,8 @@
+- code kube
+- script k3d ? setup
+- script deploy base
+- script deploy canary
+- script delete canary
+- script update canary
+- script delete all k8s objects
+- script delete cluster
