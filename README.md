@@ -12,15 +12,31 @@ This repository provides a simple example of a canary deployment on Kubernetes (
 
 ### Local a cluster
 
-> ./scripts/setup_cluster.sh
+> ./scripts/1_setup_cluster.sh
 
 ### Build containers
 
+> ./scripts/2_docker_build.sh
+
 ### Launch base
+
+> ./scripts/3_deploy_base.sh
+
+- app will be available on: "placeholder"
 
 ### Launch canary
 
+> ./scripts/4_deploy_canary.sh
+
+- Test the canary!
+
 ### Decide to keep base or to upgrade to canary
+
+> ./scripts/5_upgrade_canary.sh
+
+_OR_
+
+> ./scripts/5_delete_canary.sh
 
 ## Quick destroy
 
@@ -63,38 +79,36 @@ Dockerfile you need to specify an arg that is an hexa color code (will be mapped
 
 Plain html website with the background color that is shifting for the purpose of the demo.
 
-###
-
 ### All scripts
 
-#### docker_build.sh
+#### 2_docker_build.sh
 
 - builds two docker containers one with a yellow background, the other is blue
 
-#### deploy_base.sh
+#### 3_deploy_base.sh
 
-- deploy the main
+- deploy the main k8s objects for base
 
-#### deploy_canary.sh
+#### 4_deploy_canary.sh
 
-- deploy the canary
+- deploy the canary k8s objects
 
-#### delete_upgrade_canary.sh
+#### 5_upgrade_canary.sh
 
-- removes the canary deployment and upgrade the main with new version
+- removes the canary deployment and upgrade the main with the new version
 
-#### delete_canary.sh
+#### 5_delete_canary.sh
 
 - removes the canary deployment without changing anything
 
-#### delete_canary_main.sh
+#### 666_delete_canary_main.sh
 
-- removes everything
+- removes all apps on the cluster (all k8s objects)
 
-#### setup_cluster.sh
+#### 1_setup_cluster.sh
 
 - launches a k8s cluster
 
-#### delete_cluster.sh
+#### 666_delete_cluster.sh
 
 - removes the k8s cluster
