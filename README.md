@@ -97,10 +97,6 @@ Plain html website with the background color that is shifting for the purpose of
 
 - deploy the canary k8s objects
 
-#### 5_upgrade_canary.sh
-
-- removes the canary deployment and upgrade the main with the new version
-
 #### 5_delete_canary.sh
 
 - removes the canary deployment without changing anything

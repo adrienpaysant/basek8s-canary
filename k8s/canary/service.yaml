@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: main-svc
+  name: canary-svc
   labels:
-    app: main-app
+    app: canary-app
 spec:
   type: ClusterIP
   selector:
-    app: main-app
+    app: canary-app
   ports:
     - protocol: TCP
       port: 80

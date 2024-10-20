@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: main-app
+  name: canary-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: main-app
+      app: canary-app
   template:
     metadata:
       labels:
-        app: main-app
+        app: canary-app
     spec:
       containers:
-        - name: main-app
-          image: basek8s-canary:blue
+        - name: canary-app
+          image: basek8s-canary:yellow
           ports:
             - containerPort: 80
