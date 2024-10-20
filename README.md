@@ -42,7 +42,7 @@ _OR_
 
 ### Shutdown local cluster
 
-> ./scripts/delete_cluster.sh
+> ./scripts/666_delete_conf.sh
 
 ## Doc
 
@@ -105,6 +105,6 @@ Plain html website with the background color that is shifting for the purpose of
 
 - removes all apps on the cluster (all k8s objects)
 
-#### 666_delete_cluster.sh
+#### 666_delete_conf.sh
 
-- removes the k8s cluster
+- removes the k8s namespace/config
